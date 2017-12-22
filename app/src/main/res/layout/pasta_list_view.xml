@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <variable
+            name="pastalistview"
+            type="com.piccante.anurr.piccantemenu.PastaAdapter"/>
+    </data>
+
+
+
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:layout_marginBottom="2dp"
+    android:layout_marginTop="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/view_background"
+            android:background="@color/piccante"
+            >
+
+            <ImageView
+                android:id="@+id/delete_icon"
+                android:layout_width="@dimen/ic_delete"
+                android:layout_height="@dimen/ic_delete"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padd_10"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:tint="@android:color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/padd_10"
+                android:layout_toLeftOf="@id/delete_icon"
+                android:text="@string/delete"
+                android:textColor="#fff"
+                android:textSize="13dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view_foreground"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/typeimage"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:src="@drawable/spaghettinon"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/pastaTitle"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:text="Spaghetti ft. Carbonara"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:id="@+id/pastaToppings"
+                    android:layout_weight="1"
+                    android:textSize="8sp"
+                    android:text="WITH TOPPINGS\n    MUSHROOM, CHEDDAR, MOZARELLA, WURST, EGG"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/amount"
+                    android:textSize="9sp"
+                    android:text="Amount: 1"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:id="@+id/price"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/red_error"
+                        android:text="IDR Price"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+</RelativeLayout>
+</layout>

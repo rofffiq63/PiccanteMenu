@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="orderViewBinding"
+            type="com.piccante.anurr.piccantemenu.Order" />
+    </data>
+
+<android.support.design.widget.CoordinatorLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f8f8"
+    android:animateLayoutChanges="true"
+    android:id="@+id/ordercoor">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/piccante"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/guestname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hello, Guest!"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorWhite"
+                android:textAlignment="textStart"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardElevation="0dp"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="6dp">
+
+                <co.ceryle.radiorealbutton.RadioRealButtonGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rrbg_animateDrawables_enter="bounce"
+                    app:rrbg_backgroundColor="@color/piccante"
+                    android:id="@+id/menuGroup"
+                    android:layout_margin="2dp"
+                    app:rrbg_animateTexts_enter="overshoot"
+                    app:rrbg_dividerColor="@color/colorWhite"
+                    app:rrbg_dividerSize="2dp"
+                    app:rrbg_dividerPadding="0dp"
+                    app:rrbg_radius="5dp"
+                    app:rrbg_checkedPosition="0"
+                    app:rrbg_selectorFullSize="true"
+                    app:rrbg_selectorColor="@color/colorWhite">
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_ripple="false"
+                        app:rrb_text="Pasta"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textSize="11sp"
+                        app:rrb_textColorTo="@color/piccante"
+                        app:rrb_textColor="@color/colorWhite"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_ripple="false"
+                        app:rrb_text="Snacks"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textSize="11sp"
+                        app:rrb_textColorTo="@color/piccante"
+                        app:rrb_textColor="@color/colorWhite"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_ripple="false"
+                        app:rrb_text="Drinks"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textSize="11sp"
+                        app:rrb_textColorTo="@color/piccante"
+                        app:rrb_textColor="@color/colorWhite"/>
+
+                </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/menuPastaGroup"
+                    layout="@layout/menu_pasta"/>
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+</layout>

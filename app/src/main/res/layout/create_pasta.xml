@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+        <variable
+            name="createPasta"
+            type="com.piccante.anurr.piccantemenu.Order"/>
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#00ffffff">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/piccante"
+        app:cardElevation="0dp"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="6dp">
+
+        <co.ceryle.radiorealbutton.RadioRealButtonGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:rrbg_animateDrawables_enter="bounce"
+            android:id="@+id/stepGroup"
+            android:layout_margin="2dp"
+            app:rrbg_animateTexts_enter="overshoot"
+            app:rrbg_dividerColor="@color/piccante"
+            app:rrbg_dividerSize="2dp"
+            app:rrbg_dividerPadding="0dp"
+            app:rrbg_radius="5dp"
+            app:rrbg_checkedPosition="0"
+            app:rrbg_selectorFullSize="true"
+            app:rrbg_selectorColor="@color/piccante">
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_ripple="false"
+                app:rrb_text="Step 1"
+                app:rrb_textStyle="bold"
+                app:rrb_textSize="11sp"
+                app:rrb_textColorTo="@color/colorWhite"
+                app:rrb_textColor="@color/piccante"/>
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_ripple="false"
+                app:rrb_text="Step 2"
+                app:rrb_textStyle="bold"
+                app:rrb_textSize="11sp"
+                app:rrb_textColorTo="@color/colorWhite"
+                app:rrb_textColor="@color/piccante"/>
+
+            <co.ceryle.radiorealbutton.RadioRealButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:rrb_ripple="false"
+                app:rrb_text="Step 3"
+                app:rrb_textStyle="bold"
+                app:rrb_textSize="11sp"
+                app:rrb_textColorTo="@color/colorWhite"
+                app:rrb_textColor="@color/piccante"/>
+
+        </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+    </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/piccante_color"
+                android:layout_marginBottom="16dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/step1Sec">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Choose Pasta"
+                    android:paddingBottom="5dp"
+                    android:textSize="12sp"/>
+
+                <co.ceryle.radiorealbutton.RadioRealButtonGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rrbg_animateDrawables_enter="bounce"
+                    android:id="@+id/pastaGroup"
+                    android:layout_margin="10dp"
+                    app:rrbg_animateTexts_enter="overshoot"
+                    app:rrbg_dividerColor="@color/piccante"
+                    app:rrbg_dividerSize="0dp"
+                    app:rrbg_radius="4dp"
+                    app:rrbg_selectorFullSize="true"
+                    app:rrbg_selectorColor="@color/piccante"
+                    app:rrbg_selectorSize="3dp">
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/spaghettinon"
+                        android:id="@+id/spaghettiRadio"
+                        app:rrb_drawableHeight="80dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="80dp"
+                        app:rrb_ripple="false"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_text="Spaghetti"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textSize="11sp"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/pennenon"
+                        android:id="@+id/penneRadio"
+                        app:rrb_drawableHeight="80dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="80dp"
+                        app:rrb_ripple="false"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_text="Penne"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textSize="11sp"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/fusilinon"
+                        android:id="@+id/fusilliRadio"
+                        app:rrb_drawableHeight="80dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="80dp"
+                        app:rrb_ripple="false"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_text="Fusilli"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textSize="11sp"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/step2Sec">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Sauce"
+                    android:paddingBottom="5dp"
+                    android:textSize="12sp"/>
+
+                <co.ceryle.radiorealbutton.RadioRealButtonGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rrbg_animateDrawables_enter="bounce"
+                    android:id="@+id/sauceGroup"
+                    android:layout_margin="10dp"
+                    app:rrbg_animateTexts_enter="overshoot"
+                    app:rrbg_dividerColor="@color/piccante"
+                    app:rrbg_dividerSize="0dp"
+                    app:rrbg_radius="4dp"
+                    app:rrbg_selectorFullSize="true"
+                    app:rrbg_selectorColor="@color/piccante"
+                    app:rrbg_selectorSize="3dp">
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/blackpepper"
+                        android:id="@+id/bpRadio"
+                        app:rrb_drawableHeight="80dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="80dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="11sp"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_text="Blackpepper"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/bolognese"
+                        android:id="@+id/blRadio"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_drawableHeight="80dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="80dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="11sp"
+                        app:rrb_text="Bolognese"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/carbonara"
+                        android:id="@+id/cbRadio"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_drawableHeight="80dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="80dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="11sp"
+                        app:rrb_text="Carbonara"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Level"
+                    android:paddingBottom="5dp"
+                    android:textSize="12sp"/>
+
+                <co.ceryle.radiorealbutton.RadioRealButtonGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:rrbg_animateDrawables_enter="bounce"
+                    android:id="@+id/levelGroup"
+                    android:layout_margin="10dp"
+                    app:rrbg_animateTexts_enter="overshoot"
+                    app:rrbg_dividerColor="@color/piccante"
+                    app:rrbg_dividerSize="0dp"
+                    app:rrbg_radius="4dp"
+                    app:rrbg_selectorFullSize="true"
+                    app:rrbg_selectorColor="@color/piccante"
+                    app:rrbg_selectorSize="3dp">
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/calmRadio"
+                        app:rrb_text="CALM"
+                        app:rrb_drawableHeight="20dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="20dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="8sp"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_textStyle="bold|italic"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/levelone"
+                        android:id="@+id/oneRadio"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_drawableHeight="20dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="20dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="6sp"
+                        app:rrb_text="Level 1"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/leveltwo"
+                        android:id="@+id/twoRadio"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_drawableHeight="20dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="20dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="6sp"
+                        app:rrb_text="Level 2"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/levelthree"
+                        android:id="@+id/threeRadio"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_drawableHeight="20dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="20dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="6sp"
+                        app:rrb_text="Level 3"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/levelfour"
+                        android:id="@+id/fourRadio"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_drawableHeight="20dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="20dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="6sp"
+                        app:rrb_text="Level 4"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                    <co.ceryle.radiorealbutton.RadioRealButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:rrb_drawable="@drawable/levelfive"
+                        android:id="@+id/fiveRadio"
+                        app:rrb_drawableGravity="top"
+                        app:rrb_drawableHeight="20dp"
+                        app:rrb_drawablePadding="4dp"
+                        app:rrb_drawableWidth="20dp"
+                        app:rrb_ripple="false"
+                        app:rrb_textSize="6sp"
+                        app:rrb_text="Level 5"
+                        app:rrb_textStyle="bold"
+                        app:rrb_textColorTo="@color/colorWhite"
+                        app:rrb_textColor="@color/piccante"/>
+
+                </co.ceryle.radiorealbutton.RadioRealButtonGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/step3Sec">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose Toppings"
+                    android:paddingBottom="5dp"
+                    android:textSize="12sp"/>
+
+                <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Mushroom"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="+4K "
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"/>
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/mushroom_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:sb_show_indicator="false"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            app:sb_checked_color="@color/piccante_color"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Cheddar"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="+2K "
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"/>
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/cheddar_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:sb_show_indicator="false"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            app:sb_checked_color="@color/piccante_color"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Mozarella"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="+4K "
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"/>
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/mozarella_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:sb_show_indicator="false"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            app:sb_checked_color="@color/piccante_color"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Wurst"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="+4K "
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"/>
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/wurst_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:sb_show_indicator="false"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            app:sb_checked_color="@color/piccante_color"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:text="Egg"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="+3K "
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/item"/>
+
+                        <com.suke.widget.SwitchButton
+                            android:id="@+id/egg_switch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:sb_show_indicator="false"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            app:sb_checked_color="@color/piccante_color"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/amountPrice"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Amount"
+                android:textSize="16sp"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:minWidth="120dp"
+                app:cardBackgroundColor="#00ffffff"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/mintext"
+                        android:text="-"
+                        android:textColor="@color/colorWhite"
+                        android:gravity="center"
+                        android:background="@color/piccante_color"
+                        android:clickable="true"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/amounttext"
+                        android:layout_weight="2"
+                        android:text="1"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:id="@+id/addtext"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="@color/colorWhite"
+                        android:background="@color/piccante_color"
+                        android:clickable="true"
+                        />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/piccante"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Price"
+                android:textSize="13sp"
+                android:gravity="center_vertical" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/harga"
+                android:gravity="center"
+                android:text="price"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+</layout>

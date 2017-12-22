@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+
+version = "1.0.0"
+group = 'com.piccante.anurr.piccantemenu'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        minSdkVersion 9
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+    buildToolsVersion '26.0.2'
+}
+
+dependencies {
+    compile 'com.pnikosis:materialish-progress:1.0'
+}
+//upload command gradlew -p {moduleName} clean build uploadArchives --info
